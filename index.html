@@ -1,38 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Landing Page</title>
+  
 </head>
-<body>
-    <header class="fixed w-full shadow-sm bg-lime-100">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-          <img src="./assets/images/logo.png" alt="logo" class="w-50 ">
-          <nav>
-            <ul class="flex gap-30 text-dark font-medium">
-              <li><a href="#" class="">Sobre a Disciplina</a></li>
-              <li><a href="#" class="">Sobre a Empresa</a></li>
-              <li><a href="#" class="">Descrição do Projeto</a></li>
-              <li><a href="#" class="">Membros do Grupo</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+<body class="bg-gradient-to-t from-[#fcff9e] to-[#c67700] min-h-screen text-white">
 
-      <section class="bg-lime-50 py-10 px-6 ">
-        <div class="max-w-4xl mx-auto text-slate-700">
-          <h2 class="text-3xl font-bold text-lime-600 mb-4">Sobre a Disciplina – Fábrica de Projetos</h2>
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-gradient-to-t from-[#0000] to-[#000000] text-black z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <img src="./assets/images/logo.png" alt="logo" class="w-32 md:w-40" />
+      <nav>
+        <ul class="flex gap-20 text-white font-medium">
+          <li><a href="#disciplina" class="hover:text-lime-500 transition">Sobre a Disciplina</a></li>
+          <li><a href="#empresa" class="hover:text-lime-500 transition">Sobre a Empresa</a></li>
+          <li><a href="#projeto" class="hover:text-lime-500 transition">Descrição do Projeto</a></li>
+          <li><a href="#membros" class="hover:text-lime-500 transition">Membros do Grupo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-40 pb-16 px-6">
+    
+    <div class="flex items-start gap-20 mt-10">
+      <section id="disciplina" class="bg-white p-10 rounded-[100px] shadow-xl text-slate-800 w-1/2 ">
+        <div class="max-w-800 mx-auto flex flex-col gap-6 ">
+          <h2 class="text-2xl font-bold mb-4">Sobre a Disciplina – Fábrica de Projetos</h2>
           <p class="text-lg leading-relaxed">
             A disciplina <strong>Fábrica de Projetos</strong> tem como objetivo integrar os conhecimentos adquiridos ao longo do curso, por meio do desenvolvimento de um projeto real voltado para uma empresa parceira. 
             Durante o semestre, os alunos colocam em prática conceitos aprendidos em outras disciplinas, como programação, estrutura de dados, front-end e lógica computacional, promovendo uma experiência próxima do mercado de trabalho.
           </p>
-          <p class="text-lg leading-relaxed mt-4">
-            Neste semestre, estamos utilizando linguagens e tecnologias como <strong>C#</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> e <strong>Python</strong> (com foco em estrutura de dados) para desenvolver soluções aplicadas à empresa parceira: 
-            a <span class="text-lime-700 font-semibold">Fábrica de Códigos</span>. A proposta da disciplina é incentivar o trabalho em equipe, a resolução de problemas reais e a aplicação prática de habilidades técnicas e interpessoais.
+          <p class="text-lg leading-relaxed">
+            Neste semestre, estamos utilizando linguagens e tecnologias como <strong>C#</strong>, <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong> para desenvolver soluções aplicadas à empresa parceira: 
+            a <span class="text-dark font-semibold">Fábrica de Códigos</span>. A proposta da disciplina é incentivar o trabalho em equipe, a resolução de problemas reais e a aplicação prática de habilidades técnicas e interpessoais.
           </p>
         </div>
       </section>
+      <div class="w-50 h-40 mt-20">
+        <img src="./assets/images/logo-unimar.png" alt="Logo" class="w-full h-full object-contain" />
+      </div>
+    </div>
+
+    <div class="flex items-start justify-start gap-8 mt-10">
+      <div class="w-[280px] h-[200px] flex-shrink-0 mt-[120px] ml-[200px]">
+        <img src="./assets/images/logo-fabrica-de-codigos.png" alt="Logo" class="w-full h-full object-contain" />
+      </div>
+
+      <section id="empresa" class="bg-white p-10 rounded-[100px] shadow-xl text-slate-800 w-[50%] mr-0 ml-auto">
+        <div class="max-w-800 mx-auto flex flex-col gap-6">
+          <h2 class="text-2xl font-bold mb-4">Sobre a Empresa – Fábrica de Códigos</h2>
+          <p class="text-lg leading-relaxed">
+            A <strong>Fábrica de Códigos</strong> é uma empresa dedicada ao desenvolvimento de soluções digitais voltadas para otimizar a gestão de vendas e o dia a dia das empresas. 
+            Nossa missão é facilitar a rotina de gestão através de ferramentas práticas e eficientes.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Entre os principais sistemas desenvolvidos pela empresa estão o <strong>Shopping de Preços</strong> — uma plataforma que permite comparar valores de produtos de forma inteligente — e o <strong>Sysemp</strong>, um sistema completo para controle e gestão empresarial.
+          </p>
+          <p class="text-lg leading-relaxed mt-4">
+            Com foco na inovação e na experiência do usuário, a Fábrica de Códigos busca transformar ideias em soluções tecnológicas eficazes.
+          </p>
+        </div>
+      </section>
+    </div>
+    
+    <section id="projeto" class="bg-white p-10 rounded-[30px] shadow-xl text-slate-800 mt-20 w-11/12 max-w-5xl mx-auto">
+      <div class="flex flex-col gap-6">
+        <h2 class="text-3xl font-bold mb-2">Descrição do Projeto</h2>
+        
+        <h3 class="text-2xl font-semibold">💡 PriceCPT - Monitoramento de Preços com API do Mercado Livre</h3>
+        <p class="text-lg leading-relaxed">
+          O <strong>PriceCPT</strong> é um sistema desenvolvido para monitorar o histórico de preços de produtos disponibilizados na plataforma Mercado Livre. O objetivo é oferecer aos usuários uma interface visual amigável e interativa onde seja possível acompanhar variações de preço ao longo do tempo, facilitando a tomada de decisões de compra ou análise de mercado.
+        </p>
+    
+        <h3 class="text-2xl font-semibold">🛠️ Tecnologias Utilizadas</h3>
+        <ul class="list-disc list-inside text-lg leading-relaxed">
+          <li><strong>Back-end:</strong> C# com Windows Forms e conexão com banco de dados MySQL via MySQL Connector.</li>
+          <li><strong>API:</strong> Integração com a API pública do Mercado Livre para coleta de dados dos produtos.</li>
+          <li><strong>Banco de Dados:</strong> MySQL (phpMyAdmin) para armazenar usuários e histórico de preços.</li>
+          <li><strong>Front-end:</strong> Vue.js com HTML5, CSS3 e JavaScript para criação de uma interface responsiva e moderna.</li>
+        </ul>
+    
+        <h3 class="text-2xl font-semibold">⚙️ Funcionalidades Principais</h3>
+        <ul class="list-disc list-inside text-lg leading-relaxed">
+          <li>✅ Autenticação de usuários com verificação no banco de dados.</li>
+          <li>🔎 Pesquisa e monitoramento de produtos por ID ou nome.</li>
+          <li>📊 Visualização gráfica da variação de preços ao longo do tempo.</li>
+          <li>📁 Histórico salvo no banco de dados para acesso posterior.</li>
+          <li>🔄 Atualização periódica de dados via requisições à API do Mercado Livre.</li>
+          <li>📧 (Opcional) Notificações por e-mail ou alertas visuais sobre queda ou aumento de preço.</li>
+        </ul>
+    
+        <h3 class="text-2xl font-semibold">🎯 Público-Alvo</h3>
+        <ul class="list-disc list-inside text-lg leading-relaxed">
+          <li>Usuários que desejam acompanhar os preços de produtos específicos para economizar.</li>
+          <li>Lojistas e revendedores que precisam analisar tendências de mercado.</li>
+          <li>Desenvolvedores que querem estudar integração com APIs RESTful usando C# e Vue.js.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="membros" class="max-w-6xl mx-auto mt-16 px-4">
+      <h2 class="text-3xl font-bold text-slate-800 mb-10 text-center">Membros do Grupo</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+          <img src="./assets/images/caua.png" alt="Integrante 1" class="w-32 h-32 rounded-full object-cover mb-4">
+          <h3 class="text-xl font-semibold text-slate-800">Cauã Reginato</h3>
+          <p class="text-sm text-slate-600 mt-2">Líder e responsável pelo Front-end e design da interface do usuário.</p>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+          <img src="./assets/images/jhonata.png" alt="Integrante 2" class="w-32 h-32 rounded-full object-cover mb-4">
+          <h3 class="text-xl font-semibold text-slate-800">Jhonata Canevare</h3>
+          <p class="text-sm text-slate-600 mt-2">Responsável pelo desenvolvimento front-end e back-end em html, css, JavaScript e c#.</p>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+          <img src="./assets/images/giovanni.png" alt="Integrante 3" class="w-32 h-32 rounded-full object-cover mb-4">
+          <h3 class="text-xl font-semibold text-slate-800">Giovanni Ferreira</h3>
+          <p class="text-sm text-slate-600 mt-2">Responsável pela modelagem do banco de dados e relatórios.</p>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
+          <img src="./assets/images/eduardo.png" alt="Integrante 4" class="w-32 h-32 rounded-full object-cover mb-4">
+          <h3 class="text-xl font-semibold text-slate-800">Eduardo Santos</h3>
+          <p class="text-sm text-slate-600 mt-2">Responsável pela integração com API do Mercado Livre.</p>
+        </div>
+    
+      </div>
+    </section>
+    
+  </main>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
