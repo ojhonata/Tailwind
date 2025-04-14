@@ -25,13 +25,6 @@ Esta página tem como objetivo apresentar:
 
 ---
 
-## 📷 Screenshots
-
-<img src="./assets/images/screenshot1.png" alt="Imagem da seção do projeto" />
-<img src="./assets/images/screenshot2.png" alt="Imagem da seção da empresa" />
-
----
-
 ## 🚀 Funcionalidades da Página
 
 - Layout responsivo com Tailwind.
@@ -39,8 +32,3 @@ Esta página tem como objetivo apresentar:
 - Navegação suave ao clicar no menu.
 - Cards informativos com imagens e descrições.
 - Integração visual com a logo da empresa parceira.
-
----
-
-## 📂 Estrutura de Pastas
-
