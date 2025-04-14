@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Landing Page</title>
-  
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="bg-gradient-to-t from-[#fcff9e] to-[#c67700] min-h-screen text-white">
 
-  <!-- Header -->
-  <header class="fixed top-0 w-full bg-gradient-to-t from-[#0000] to-[#000000] text-black z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <img src="./assets/images/logo.png" alt="logo" class="w-32 md:w-40" />
+  <header class="fixed top-0 w-full bg-gradient-to-t from-transparent to-black text-black z-50">
+    <div class="mx-auto px-4 py-3 flex justify-between items-center">
+      <img src="./assets/images/logo.png" alt="logo" class="w-[170px] h-[95px] ml-[40px]" />
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block" onclick="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </span>
+
       <nav>
-        <ul class="flex gap-20 text-white font-medium">
-          <li><a href="#disciplina" class="hover:text-lime-500 transition">Sobre a Disciplina</a></li>
-          <li><a href="#empresa" class="hover:text-lime-500 transition">Sobre a Empresa</a></li>
-          <li><a href="#projeto" class="hover:text-lime-500 transition">Descrição do Projeto</a></li>
-          <li><a href="#membros" class="hover:text-lime-500 transition">Membros do Grupo</a></li>
+        <ul id="menu" class="md:flex gap-20 text-white font-medium mr-[40px] md:z-auto z-[-1] md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+          <li class="my-6 md:my-0"><a href="#disciplina" class="hover:text-lime-500 transition">Sobre a Disciplina</a></li>
+          <li class="my-6 md:my-0"><a href="#empresa" class="hover:text-lime-500 transition">Sobre a Empresa</a></li>
+          <li class="my-6 md:my-0"><a href="#projeto" class="hover:text-lime-500 transition">Descrição do Projeto</a></li>
+          <li class="my-6 md:my-0"><a href="#membros" class="hover:text-lime-500 transition">Membros do Grupo</a></li>
         </ul>
       </nav>
     </div>
@@ -78,7 +83,7 @@
     
         <h3 class="text-2xl font-semibold">🛠️ Tecnologias Utilizadas</h3>
         <ul class="list-disc list-inside text-lg leading-relaxed">
-          <li><strong>Back-end:</strong> C# com Windows Forms e conexão com banco de dados MySQL via MySQL Connector.</li>
+          <li><strong>Back-end:</strong> C# com conexão com banco de dados MySQL.</li>
           <li><strong>API:</strong> Integração com a API pública do Mercado Livre para coleta de dados dos produtos.</li>
           <li><strong>Banco de Dados:</strong> MySQL (phpMyAdmin) para armazenar usuários e histórico de preços.</li>
           <li><strong>Front-end:</strong> Vue.js com HTML5, CSS3 e JavaScript para criação de uma interface responsiva e moderna.</li>
@@ -87,7 +92,7 @@
         <h3 class="text-2xl font-semibold">⚙️ Funcionalidades Principais</h3>
         <ul class="list-disc list-inside text-lg leading-relaxed">
           <li>✅ Autenticação de usuários com verificação no banco de dados.</li>
-          <li>🔎 Pesquisa e monitoramento de produtos por ID ou nome.</li>
+          <li>🔎 Pesquisa e monitoramento de produtos por link ou descrição.</li>
           <li>📊 Visualização gráfica da variação de preços ao longo do tempo.</li>
           <li>📁 Histórico salvo no banco de dados para acesso posterior.</li>
           <li>🔄 Atualização periódica de dados via requisições à API do Mercado Livre.</li>
@@ -106,37 +111,31 @@
       <h2 class="text-3xl font-bold text-slate-800 mb-10 text-center">Membros do Grupo</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <!-- Card 1 -->
         <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
           <img src="./assets/images/caua.png" alt="Integrante 1" class="w-32 h-32 rounded-full object-cover mb-4">
           <h3 class="text-xl font-semibold text-slate-800">Cauã Reginato</h3>
           <p class="text-sm text-slate-600 mt-2">Líder e responsável pelo Front-end e design da interface do usuário.</p>
         </div>
-    
-        <!-- Card 2 -->
+
         <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
           <img src="./assets/images/jhonata.png" alt="Integrante 2" class="w-32 h-32 rounded-full object-cover mb-4">
           <h3 class="text-xl font-semibold text-slate-800">Jhonata Canevare</h3>
           <p class="text-sm text-slate-600 mt-2">Responsável pelo desenvolvimento front-end e back-end em html, css, JavaScript e c#.</p>
         </div>
-    
-        <!-- Card 3 -->
+
         <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
           <img src="./assets/images/giovanni.png" alt="Integrante 3" class="w-32 h-32 rounded-full object-cover mb-4">
           <h3 class="text-xl font-semibold text-slate-800">Giovanni Ferreira</h3>
           <p class="text-sm text-slate-600 mt-2">Responsável pela modelagem do banco de dados e relatórios.</p>
         </div>
-    
-        <!-- Card 4 -->
+
         <div class="bg-white shadow-md rounded-2xl p-4 flex flex-col items-center text-center hover:shadow-xl transition-shadow">
           <img src="./assets/images/eduardo.png" alt="Integrante 4" class="w-32 h-32 rounded-full object-cover mb-4">
           <h3 class="text-xl font-semibold text-slate-800">Eduardo Santos</h3>
           <p class="text-sm text-slate-600 mt-2">Responsável pela integração com API do Mercado Livre.</p>
         </div>
-    
       </div>
     </section>
-    
   </main>
   <script src="./assets/js/script.js"></script>
 </body>
