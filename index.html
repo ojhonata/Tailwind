@@ -11,19 +11,20 @@
 </head>
 <body class="bg-gradient-to-t from-[#fcff9e] to-[#c67700] min-h-screen text-white">
 
-  <header class="fixed top-0 w-full bg-gradient-to-t from-transparent to-black text-black z-50">
+  <header class="fixed top-0 w-full bg-[#B2BEBF] text-white z-50 ">
     <div class="mx-auto px-4 py-3 flex justify-between items-center">
-      <img src="./assets/images/logo.png" alt="logo" class="w-[170px] h-[95px] ml-[40px]" />
+      <img src="./assets/images/logo.png" alt="logo" class="w-[150px] h-[60px] ml-[40px]" />
+
       <span class="text-3xl cursor-pointer mx-2 md:hidden block" onclick="toggleMenu()">
-        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="menu-outline" class="ml-[130px]"></ion-icon>
       </span>
 
       <nav>
-        <ul id="menu" class="md:flex gap-20 text-white font-medium mr-[40px] md:z-auto z-[-1] md:static absolute bg-black md:bg-transparent w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
-          <li class="my-6 md:my-0"><a href="#disciplina" class="hover:text-lime-500 transition">Sobre a Disciplina</a></li>
-          <li class="my-6 md:my-0"><a href="#empresa" class="hover:text-lime-500 transition">Sobre a Empresa</a></li>
-          <li class="my-6 md:my-0"><a href="#projeto" class="hover:text-lime-500 transition">Descrição do Projeto</a></li>
-          <li class="my-6 md:my-0"><a href="#membros" class="hover:text-lime-500 transition">Membros do Grupo</a></li>
+        <ul id="menu" class="bg-[#B2BEBF] md:flex gap-20 text-white font-medium mr-[40px] md:z-auto z-[-1] md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+          <li class="my-6 md:my-0"><a href="#disciplina" class="">Sobre a Disciplina</a></li>
+          <li class="my-6 md:my-0"><a href="#empresa" class="">Sobre a Empresa</a></li>
+          <li class="my-6 md:my-0"><a href="#projeto" class="">Descrição do Projeto</a></li>
+          <li class="my-6 md:my-0"><a href="#membros" class="">Membros do Grupo</a></li>
         </ul>
       </nav>
     </div>
